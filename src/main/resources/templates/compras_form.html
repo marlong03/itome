@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8 ">
+<title>Inventario</title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="">Calzado Lexter</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarNav" aria-controls="navbarNav"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+
+				<li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+
+
+
+
+
+	<div class="container text-center">
+
+<div>
+<h1 th:if="${compras.idcompras ==null}">Registro de compra</h1>
+<h1 th:unless="${compras.idcompras ==null}">Editar compra</h1>
+</div>
+		
+	<form th:action="@{/compras/guardar}" th:object="${compras}" method="post" style="max-width:600px; margin:0 auto;">	
+	<input type="hidden" th:field="*{idcompras}" th:value="${compras.idcompras}"/>
+	
+	<div class="m-3">
+		<div class="form-group row">
+		<label class="col-form-label col-sm-4">Valot total :</label>
+		<div class="col-sm-8">
+		<input type="text" th:field="*{valor}" class="form-control" required>
+		</div>
+		</div>
+		<div class="form-group row">
+		<label class="col-form-label col-sm-4">Cantidad :</label>
+		<div class="col-sm-8">
+		<input type="text" th:field="*{cantidad}" class="form-control" required>
+		</div>
+		</div>
+		<div class="form-group row">
+		<label class="col-form-label col-sm-4">Fecha de la compra :</label>
+		<div class="col-sm-8">
+		<input type="text" th:field="*{fecha_Compra}" class="form-control" required>
+		</div>
+		</div>
+		
+	
+		
+		
+		
+		<div class="form-group row">
+		<label class="col-form-label col-sm-4">Vendeor :</label>
+		<div class="col-sm-8">
+		<select th:field="*{proveedor}" class="form-control" required>
+		<th:block th:each="proveedor : ${listaProveedor}">
+		<option th:text="${proveedor.nombres}" th:value="${proveedor.id}"></option>
+		<th:block>
+		</select>
+		</div>
+		</div>
+		<div class="form-group row">
+		<label class="col-form-label col-sm-4">Forma de pago :</label>
+		<div class="col-sm-8">
+		<select th:field="*{Formpago}" class="form-control" required>
+		<th:block th:each="Formpago : ${listaFormpago}">
+		<option th:text="${Formpago.nombre}" th:value="${Formpago.id}"></option>
+		<th:block>
+		</select>
+		</div>
+		</div>
+		
+		<div class="form-group row">
+		<label class="col-form-label col-sm-4">Productos :</label>
+		<div class="col-sm-8 text-left">
+		<th:block th:each="producto :${listaProducto}"> 
+		<div>
+		<input type="checkbox" th:field="*{producto}" th:text="${producto.nombre}" 
+		th:value="${producto.idproducto}"
+		class="m-2">
+		</div>
+		</th:block>
+		</div>
+		</div>
+		</div>
+		</div>
+		<div class="text-center p">
+		<button type="submit" class="btn btn-primary">Guardar</button>
+		</div>
+		</div>
+		</form>
+	</div>
+
+</body>
+</html>

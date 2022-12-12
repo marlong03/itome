@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8 ">
+<title>marca</title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="">Calzado Lexter</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarNav" aria-controls="navbarNav"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+
+				<li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+
+
+
+	<div class="container text-center">
+	<div>
+<h1 th:if="${proveedor.id ==null}">Registro de proveedor</h1>
+<h1 th:unless="${proveedor.id ==null}">Editar proveedor</h1>
+</div>
+	
+
+<div>
+<h1>Registro de datos personales</h1>
+</div>
+		
+	<form th:action="@{/proveedor/guardar}" th:object="${proveedor}" method="post" style="max-width:600px; margin:0 auto;">	
+	<input type="hidden" th:field="*{id}" th:value="${proveedor.id}"/>
+		<div class="m-3">
+		<div class="form-group row">
+		<label class="col-form-label col-sm-4">Nombre :</label>
+		<div class="col-sm-8">
+		<select th:field="*{personas}" class="form-control" required>
+		<th:block th:each="personas: ${listaPersonas}">
+		<option th:text="${personas.nombres}" th:value="${personas.id}"></option>
+		<th:block>
+		</select>
+		</div>
+		</div>
+		<div class="text-center p">
+		<button type="submit" class="btn btn-primary">Guardar</button>
+		</div>
+		</div>
+		</form>
+	</div>
+
+</body>
+</html>

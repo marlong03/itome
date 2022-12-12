@@ -1,0 +1,58 @@
+
+ div .con{
+	position: relative;
+	margin-top: 60px;
+	  width: 1050px;
+	  left: 250px;
+	  height: 40px;
+     
+     	  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+} 
+
+.con .item1{
+	width: 500px;
+	margin-top: 20px;
+} 
+.con .item1 img {
+	position: relative;
+	left: 50px;
+}
+div .con .item2{
+
+
+	position: relative;
+	left: 50px;
+	margin-top: 20px;
+   width: 500px
+}
+div .item3{
+	position: relative;
+	left: 150px;
+	width: 1050px;
+}
+
+div .item4{
+	position: relative;
+	left: 150px;
+	width: 1050px;
+	padding: auto;
+
+}
+
+.item4{
+	position: relative;
+	display: flex;
+     left: 150px
+}
+.item4 input{
+	position: relative;
+	width: 800px;
+	height: 50px;
+	margin-right:20px ;
+}
+ .item4 divbutton{
+	position: relative;
+	left: 150px;
+}

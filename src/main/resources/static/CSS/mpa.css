@@ -1,0 +1,69 @@
+div .con{
+	position: relative;
+	margin-top: 60px;
+	  width: 1050px;
+	  left: 150px;
+	  height: 400px;
+     
+     	  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+} 
+
+.con .item1{
+	width: 200px;
+	margin-top: 20px;
+	align-content: centers;
+} 
+.con3 .item1 #data {
+	position: relative;
+	left: 20px
+}
+
+
+div .con .item2{
+
+
+	position: relative;
+	left: 50px;
+	margin-top: 20px;
+   width: 500px
+}
+div .controls .item2 iframe {
+   position: relative;
+   left: 200px;
+}
+
+div .item3{
+	position: relative;
+	left: 450px;
+	width: 450px;
+	border: ;
+}
+div .con3 {
+    position: relative;
+    left: 450p;
+ 
+
+}
+div .con3  ul li{
+    position: relative;
+    left: 480px;
+    width: 200px;
+
+    display: flex;
+    list-style: none;
+
+}
+div .con3  ul li a img{
+    position: relative;
+   margin-right: 40px;
+    
+
+}
+div .con3  ul li a b{
+    position: relative;
+     color: black;
+    
+
+}

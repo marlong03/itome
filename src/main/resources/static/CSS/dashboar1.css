@@ -1,0 +1,73 @@
+.wrapper .header .side-btn i{
+	position: relative;
+	justify-content: center;
+	margin: 20px;
+	color: white;
+
+}
+ .main-container .card2 {
+	display: flex;
+   margin-top: 40px;
+
+
+
+
+}
+.main-container .card2 #data {
+ width: 900px;
+ position: relative;
+ margin-left: 10px;
+
+}
+
+.main-container .card2 #table {
+ position: relative;
+ margin-left: px;
+
+
+}
+.main-container .card2 #ta {
+   position: relative;
+   margin-top: 400px;
+
+
+
+
+}
+.main-container .card2 #ta #buttones {
+margin: 100px;
+
+
+}
+
+.card1{
+   justify-content: center; 
+}
+#chart{
+}
+.main-container .card6{
+    display: flex;
+      align-items: center;
+}
+
+.main-container .card6 #c{
+    position: relative;
+    padding: none;
+    width: 350px;
+    left: 20px;
+
+    background: white;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.main-container .card6 #c h1{
+   margin-left: 100px;
+
+}
+ .main-container .card6 #c.icon-case{
+    padding: 5px;
+    
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<title>Verificacion exitosa</title>
+</head>
+<body>
+ <nav class="navbar navbar-dark bg-dark"style="height: 70px">
+	 <div class="header">
+                <div class="side-btn " >
+                     
+                    </div>
+                <div class="header-menu">
+
+                    <div class="title"><a th:href="@{/index}"><img  th:src="@{/IMG/caz.png}"width="80px"height="40px"> <span><img th:src="@{/IMG/titulo.png}"height="40px" ></a></span></div>
+                    
+                    <ul>
+                       <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}"><i class="fas fa-power-off"></i></a></li>
+                        
+                    </ul>
+                    
+                </div>
+            </div>
+</nav>
+<div class="container text-center">
+    <h1>Felicicdades, tu cuenta ya ha sido verificada.</h1>
+    <h4><a th:href="@{/login}">Click a aqui para ingresar</a></h4>
+
+</div>
+</body>
+</html>

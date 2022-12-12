@@ -1,0 +1,162 @@
+
+.side-menu {
+    position: fixed;
+    background: #202c39;
+    left: 0px;
+    top: 0px;
+
+    width: 20vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.side-menu .brand-name {
+    height: 10vh;
+    padding: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.side-menu .brand-name h1 p {
+    position: relative;
+    height: 10vh;
+    top: 20px;
+    padding: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-menu  li {
+    font-size: 20px;
+
+    list-style: none;
+    padding: 13px 5px;
+    margin: 0;
+    color: white;
+    display: flex;
+    
+} 
+.side-menu  li a{
+     color: white;
+}
+.side-menu ul li i a {
+    font-size: 10px;
+    padding: 5px 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.side-menu ul li a:hover {
+    position: relative;
+    width: 230px;
+    margin: 0px;
+    left: 20px;
+    background: white;
+    color: #023e8a;
+}
+.side-menu ul li a i{
+    position: relative;
+    padding: 3px;
+    margin: 0;
+    right: 10px;
+}
+
+.side-menu ul li a i:hover {
+    background: white;
+    color: #023e8a;
+}
+@media screen and (max-width: 1050px) {
+    .side-menu li a {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .side-menu ul li a span {
+        display: none;
+    }
+    .side-menu {
+        align-items: center;
+    }
+    .side-menu ul li a i {
+        width: 40px;
+        height: 40px;
+    }
+    .side-menu ul li a:hover {
+        background: #f05462;
+        padding: 8px 38px;
+        border: 2px solid white;
+    }
+}
+ .cards {
+   
+    left: 120px;
+    top: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+.cards .card {
+    position: relative;
+    padding: none;
+    top: 40px;
+    width: 350px;
+    left: 80px;
+    height: 150px;
+    background: white;
+    margin: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+ #ventasGrafico {
+    
+    position: relative;
+    padding-top: 60px;
+    
+    left: 280px;
+    height:  1000px;
+    width: 1200px
+
+ 
+}
+
+ .cards .icon-case{
+    padding: 5px;
+ }
+ @media screen and (max-width:536px) {
+    .brand-name h1 {
+        font-size: 16px;
+    }
+    .container .content .cards {
+        justify-content: left;
+    }
+    .side-menu li i {
+        width: 30px;
+        height: 30px;
+    }   
+
+
+}
+#bo{
+    position: relative;
+    left: 950px;
+}
+
+
+#bos{
+    position: relative;
+    top: 80px;
+    left: 950px;
+}
+
+
